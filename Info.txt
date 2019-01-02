@@ -1,0 +1,15 @@
+1.Projekt Web Programming "DönerDudes" von:
+
+Evan Seilz 
+
+und 
+
+Jan Driescher
+
+
+
+zusätliche Informationen:
+Wir haben nicht herausgefunden wie die Ordnerstruktur für CSS und Java Script aussehen muss,
+jedoch gehen wir davon aus das wir sie später (ähnlich wie die Bilder) verknüpfen können und 
+haben deswegen eigene Ordner dafür angelegt.
+Alle anderen Informationen haben wir den zur Verfügung stehenden Datein aus Moodle entnommen.

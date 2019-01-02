@@ -1,0 +1,391 @@
+/*
+-----------------------KOMMENTARE--------------------------
+
+1. RESET UND NORMALIZE
+
+Mit Hilfe eines reset oder normalize style sheets hätten wir die Standard Browser Einstellungen überschreiben und alle Abstände (margins, borders etc.) auf 0 setzen und uns damit das Leben etwas leichter machen können. 
+Wir hatten zum Beispiel das Problem, dass unsere Navigationselemente sich nicht hundertprozentig mittig angeordnet haben. Erst durch Hilfe von Frau Doombach haben wir herausgefunden, dass vordefinierte Größen unsere Navigation verschoben hat. 
+Wir mussten also an manchen Stellen weil wir keinen reset benutzt haben mehr Arbeit investieren um Abstände und Layout sinnvoll einzurichten.
+Ich Nachinein würden wir ein reset benutzen, wenn wir die Seite erneut schreiben müssten. Da wir aber von Anfang uns dagegen entschieden haben, haben wir mittlerweile uns auf unser System eingestellt und an bestimmten Punkten einfach selber unsere Abstände bestimmt haben.
+
+2. DESKTOP/ MOBILE
+
+Generell ist es besser, beide Styles in ein CSS Dokument zu schreiben, da der Browser immer alle Stylesheets herunterlädt, unabhängig von den media queries. Deshalb ist es von Vorteil, beide Versionen in ein sheet zu schreiben um die http requests zu minimieren. 
+Wir haben dementsprechend sowohl die mobile als auch die desktop styles in unserer myStyle.css definiert und mit Hilfe von media queries abgegrenzt. Ab einer Displayweite von 420px wird unser mobile sheet angewendet und dementsprechend das angepasste Layout angezeigt.
+
+Die oben definierten styles werden generell zuerst gelesen und dann unten überschrieben, wenn die media queries greifen. Deshalb sollte man sich überlegen, welche die prioritisierte Version ist und diese zuerst oben schreiben und dann unten die angepasste Version hinzufügen. Dementsprechen ist unsere Desktop Version oben im Stylesheet und die Mobile Version unten.
+
+
+3. RESPONSIVE DESIGN
+
+Responsive Design ist insofern ein wichtiger Teil der Website, da es die Anpassung an verschiedene Umstände wie zum Beispiel Displaygrößen sichert und generell durch Pseudolemente wie :hover für ein ansprechenderes und rundum schöneres Design sorgt.
+Wir haben durch die hover Funktionen in der Navigation sowohl die Interaktion mit den Elementen visuell verdeutlicht und kleine Spielerein wie die Vergrößerung der Bewertung hinzugefügt. 
+Ein Blog ist natürlich weniger passend, um viel mit interessanten CSS styles rumzuspielen, aber gerade bei künstlerischeren Websiten kann man mit Hilfe von Pseudo Elementen und anderen Funktion sehr ansprechende Designs erschaffen.
+
+-----------------------DESKTOP--------------------------
+*/
+
+
+*{
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: ChangaOne;
+    src:Schriften/ChangaOne;
+    font-family: HTWBerlinOffice-Regular;
+    src:Schriften/HTW;     
+}
+
+body{
+    font-size: 16px;
+    background: #fcf0f1;
+    text-align: center;
+    margin: 0;
+    font-family: HTWBerlinOffice-Regular, Arial, sans-serif;
+    margin-top: 150px;
+    color: #410305;
+}
+
+
+footer{
+    background: #ce0917;
+    margin: 0;
+    padding: 0;
+    color: #fcf0f1;
+}
+
+.article-separator{
+
+    height:2px;
+    background:#ce0917;
+    margin-top: 20px;
+
+}
+
+/*
+-----------------NAV--------------------
+*/
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 130px;
+    background: #ce0917; 
+}
+
+nav{
+    font-size: 1.2rem;
+}
+
+nav li {
+    display: inline-block;
+    width: 24%;
+    background: #fcf0f1;
+    color: #410305;
+}
+
+nav li a {
+    color: #410305;
+    text-decoration: none;
+}
+
+nav li:hover{ 
+    background: #410305;
+    transition: background 0.2s ease;
+}
+
+nav a{
+    display: block; /*block-Element--> nav a füllt kompletten Kasten aus --> hover animation wird in allen Bereichen des Kastens ausgeführt*/
+}
+
+nav li a:visited {
+    color: initial;
+}
+
+nav li a:hover {
+    color: #fcf0f1;
+    transition: color 0.2s ease;
+}
+
+
+nav, ul{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+-----------------BLOG--------------------
+*/
+h1{
+    color: #fcf0f1;
+}
+
+h2{
+    font-size: 1.3rem;
+}
+
+h4{
+    display: inline-block;
+    width: 25%;
+    vertical-align: middle; 
+}
+
+p{
+    padding: 3%;
+}
+
+article p{
+    text-align: justify;
+}
+
+.blogbilder{
+    width: 50%;
+}
+
+
+footer p{
+    margin-bottom: 0;
+    margin-top: 0px;
+    clear: both;
+}
+
+a{
+    text-decoration: none;
+    text-decoration-color: initial;
+}
+
+h1,nav li, h2, h4, strong{
+    font-family: ChangaOne, Arial, sans-serif
+}
+
+#profilbild{
+    margin-right: 4%;
+    vertical-align: middle
+}
+
+#bewertung{
+    vertical-align: middle;
+    transition: transform 0.2s ease;
+}
+
+#bewertung:hover{
+    transform: scale(1.5)
+   
+}
+
+#zutaten{
+    padding-top: 2%;
+    padding-bottom:2%;
+}
+
+#voll{
+    padding-top: 2%;
+    padding-bottom: 5%;
+}
+
+section{
+    background: #fcf0f1;
+}
+
+#zutaten > img:hover{
+    transform: scale(1.3);
+    transition: transform 0.2s ease;
+
+}
+    
+    
+
+/*
+-----------------FORMULAR--------------------
+*/
+
+fieldset{
+    display: flex;
+    text-align: left;
+    margin-bottom: 3%;
+}
+
+fieldset input{
+   margin-bottom: 1%;
+    margin-top: 1%
+
+}
+
+
+/*
+#sub{
+	visibility: hidden;	
+		
+}	
+	
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+-----------------------MOBILE--------------------------
+*/
+
+@media only screen and (max-device-width:420px) and (orientation: portrait){
+
+
+
+body{
+    font-size: 40px;
+    background: #fcf0f1;
+    text-align: center;
+    margin: 0;
+    font-family: HTWBerlinOffice-Regular, Arial, sans-serif;
+    font-weight: 400;
+    margin-top: 270px;
+    color: #410305;
+}
+
+/*
+-----------------NAV--------------------
+*/
+h1{
+    color: #fcf0f1;
+    margin: 20px;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 240px;
+    background: #ce0917; 
+}
+
+nav{
+    font-size: 2.5rem;
+    
+}
+
+nav li {
+    display: inline-block;
+    width: 25%;
+    background: #410305;
+    height: 100px;
+    width: 32%;
+    color: #410305;
+}
+
+
+nav a{
+    display: block;
+    height: 100px;
+    line-height: 100px
+    
+
+}
+
+nav li a:visited {
+    color: #fcf0f1;
+}
+
+
+nav, ul{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+-----------------BLOG--------------------
+*/
+
+
+h4{
+    display: inline-block;
+    width: 25%;
+    vertical-align: middle;
+    font-size: 35px;
+}
+
+p{
+    padding: 3%;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+
+article{
+    font-size: 20px
+}
+
+.blogbilder{
+    width: 70%;
+}
+
+
+#profilbild{
+    margin-right: 3%;
+    vertical-align: middle;
+    width: 2em;
+    
+}
+
+#bewertung{
+    vertical-align: middle;
+    transition: transform 0.2s ease;
+    width: 3em;
+    height: 3em;
+}
+
+
+/*
+-----------------FORMULAR--------------------
+*/
+
+
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

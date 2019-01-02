@@ -1,0 +1,106 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    background: #f4c9cc;
+    text-align: center;
+    margin: 0;
+    font-family:Helvetica,sans-serif;
+    font-weight: 100;
+    margin-top: 130px;
+    color: black;
+}
+
+
+footer{
+    background: #ce0917;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+-----------------NAV--------------------
+*/
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: #ce0917; 
+}
+
+nav{
+    font-size: 1.2rem;
+}
+
+nav li{
+    display: inline-block;
+    width: 25%;
+    background: #f4c9cc;
+}
+
+nav li:hover {
+    background: #222211;
+    font
+}
+
+
+nav, ul{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 3%
+}
+
+/*
+-----------------BLOG--------------------
+*/
+h2{
+    font-size: 1.3rem;
+}
+
+p{
+    font-size: 1rem
+}
+
+article p{
+    text-align: justify;
+}
+
+.blogbilder{
+    width: 70%;
+}
+
+p{
+    padding: 3%
+}
+
+footer p{
+    margin-bottom: 0;
+}
+
+a{
+    text-decoration: none;
+    text-decoration-color: initial;
+}
+
+/*
+-----------------FORMULAR--------------------
+*/
+
+fieldset{
+    display: flex;
+    text-align: left;
+    margin-bottom: 3%;
+}
+
+fieldset input{
+   margin-bottom: 1%;
+    margin-top: 1%
+
+}

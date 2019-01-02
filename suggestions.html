@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>DIE DÖNER DUDES</title>   <!--Anderer Titel ? -->
+        <meta  charset="utf-8">
+        <link rel="stylesheet" href="CSS/myStyles.css" media="screen">
+        <script type="text/javascript" src="JavaScript/myJavaScript.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1 title="YUMMY YUMMY" >
+              <!--<img src="Grafiken/doener1.png" alt="Kleiner Döner, Lecker!!" title="YUMMY YUMMY" width=30>-->
+              DIE DÖNER DUDES     
+              <!--<img src="Grafiken/doener1.png" alt="Kleiner Döner, Lecker!!" title="YUMMY YUMMY" width=30>-->
+            </h1>
+            <nav id="nav"> <!-- Optional auch in den Header, ist immer eine Aufzählung-->
+                <ul><!-- unordered List , unsortierte Liste-->
+                    <li><a href="index.html">BLOG </a></li>
+                    <li> <a href="aboutus.html">Über uns </a></li>
+                    <li> <a href="suggestions.html"> Vorschläge </a></li>
+                    <li> <a href="Spiel.html" id="spiel"> Spiel </a></li>
+                </ul>
+            </nav>  
+        </header>
+
+            <h2>Welchen Döner sollen wir als nächstes testen? 
+             
+            Hier kommen eure Vorschläge rein: </h2>
+         <form action="SpielReal.html" method="get" id="formular">
+            <fieldset title="eure Daten bleiben natürlich anonym!">
+                <legend> Persönliche Daten
+                </legend>
+                <label for="vorname"> Vorname: </label>
+                <input id="vorname" type="text" maxlength="20" size="20" placeholder="Max">
+                <label for="nachname"> Nachname: </label>
+                <input id="nachname" type="text" maxlength="20" size="20" placeholder="Mustermann">
+                <label for="age">Alter:</label>
+                <input id="age" type="date">
+                <label for="mail">E-Mail:</label>
+                <input maxlength="30" size="30" type="email" placeholder="max.mustermann@example.de" id="mail">
+            </fieldset>
+            <fieldset>
+                <legend>Wie sehr magst du Döner?</legend>  
+                <label for="dönerrange">Gar nicht</label>
+                <input id="dönerrange" type="range" >
+                <label for="dönerrange">Sehr doll</label>
+                
+            </fieldset>
+            <fieldset>
+                <legend> Welchen Dönerladen sollen wir probieren?</legend>
+                <label for="dönername">Name des Ladens :</label>
+                <input id="dönername" type="text" size="32" maxlength="30" placeholder="z.B.: Mustafas Gemüse Kebap" >
+                <label for="döneradresse">Adresse des Ladens :</label>
+                <input id="döneradresse" type="text" size="32" maxlength="30" placeholder="Straße des Ladens">
+                <label for="dönerbezirk">Bezirk des Ladens :</label>
+                <input id="dönerbezirk" type="text" size="32" maxlength="30" placeholder="PLZ und Name des Bezirks">
+                <label for="da">Warst du schon einmal da ? Wenn ja, ankreuzen:</label>
+                <input id="da" type="checkbox">
+                <label for="erwähnen">Willst du im Blog namentlich benannt werden ?</label>
+                <input id="erwähnen" type="checkbox">
+            <div id="radioBoxen">
+                <label for="1">persönliche Bewertung: </label>
+                      <input type="radio" id="1" name="Review" value="1">
+                        <label for="1"> 1</label>
+                      <input type="radio" id="2" name="Review" value="2">
+                        <label for="2"> 2</label>
+                      <input type="radio" id="3" name="Review" value="3" checked>
+                        <label for="3"> 3</label>
+                      <input type="radio" id="4" name="Review" value="4">
+                        <label for="4">4</label>
+                      <input type="radio" id="5" name="Review" value="5">
+                        <label for="5">5</label>
+            </div>    
+                      <!-- name attribut = für die Gruppierung von radio buttons-->
+                <label for="antwort">Schreibe etwas über den Laden:</label>
+                <textarea id="antwort" maxlength="20" rows="5" cols="50" placeholder="Wie hat es euch gefallen, als ihr da wart ? Warum sollen wir diesen Döner probieren ? seid kreativ!"></textarea>
+                
+                <label>Danke für eure Vorschläge !</label>
+             </fieldset>
+             <fieldset>
+                 <legend hidden="hidden">Knöpfe zum senden</legend>
+                <input type="submit" id = "sub">
+                <input title="VORSICHT! Alles wird gelöscht" id="res" type="reset">
+             </fieldset>  
+         </form>
+         <footer>
+            <p>
+                Dies ist ein Projekt der DönerDudes. Bei Fragen oder Vorschlägen guckt euch auch unsere anderen Seiten an !
+            </p>    
+        </footer>
+     </body>
+</html>

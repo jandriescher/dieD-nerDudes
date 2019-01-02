@@ -1,0 +1,176 @@
+*{
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: ChangaOne;
+    src:Schriften/ChangaOne;
+    font-family: HTWBerlinOffice-Regular;
+    src:Schriften/HTW;     
+}
+
+body{
+    font-size: 40px;
+    background: #fcf0f1;
+    text-align: center;
+    margin: 0;
+    font-family: HTWBerlinOffice-Regular;
+    font-weight: 400;
+    margin-top: 260px;
+    color: #410305;
+}
+
+
+footer{
+    background: #ce0917;
+    margin: 0;
+    padding: 0;
+    color: #fcf0f1;
+}
+
+.article-separator{
+
+    height:3px;
+
+    background:#ce0917;
+    
+    margin-top: 20px;
+
+}
+
+/*
+-----------------NAV--------------------
+*/
+h1{
+    color: #fcf0f1;
+    margin: 20px;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 240px;
+    background: #ce0917; 
+}
+
+nav{
+    font-size: 2rem;
+    
+}
+
+nav li {
+    display: inline-block;
+    width: 25%;
+    background: #410305;
+    height: 100px;
+    width: 32%;
+}
+
+
+nav a{
+    display: block;
+    height: 100px;
+    line-height: 100px;
+
+}
+
+nav li a:visited {
+    color: #fcf0f1;
+}
+
+
+nav li a{
+    color: #fcf0f1;
+}
+
+nav, ul{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 3%
+}
+
+/*
+-----------------BLOG--------------------
+*/
+
+
+h4{
+    display: inline-block;
+    width: 25%;
+    vertical-align: middle;
+    font-size: 35px;
+}
+
+p{
+    padding: 3%;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+article p{
+    text-align: justify;
+}
+
+article{
+    font-size: 20px
+}
+
+.blogbilder{
+    width: 70%;
+}
+
+/*
+.blogbilder:hover{
+    transform: scale(1.3);
+    transition: transform 0.2s ease;
+*/
+
+}
+
+footer p{
+    margin-bottom: 0;
+}
+
+a{
+    text-decoration: none;
+    text-decoration-color: initial;
+}
+
+h1,nav li, h2, h4, strong{
+    font-family: ChangaOne
+}
+
+#profilbild{
+    margin-right: 3%;
+    vertical-align: middle;
+    width: 2em;
+    
+}
+
+#bewertung{
+    vertical-align: middle;
+    transition: transform 0.2s ease;
+    width: 3em;
+    height: 3em;
+}
+
+
+/*
+-----------------FORMULAR--------------------
+*/
+
+fieldset{
+    display: flex;
+    text-align: left;
+    margin-bottom: 3%;
+}
+
+fieldset input{
+   margin-bottom: 1%;
+    margin-top: 1%
+
+}
